@@ -1,7 +1,10 @@
 ## Screenshoot
 
 
-![](1.jpg)
+Inspired by GIMP
 
 
-![](2.jpg)
+![](https://github.com/onesuper/Grafic/blob/master/1.jpg)
+
+
+![](https://github.com/onesuper/Grafic/blob/master/2.jpg)
