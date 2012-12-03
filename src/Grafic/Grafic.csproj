@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1C9CD6B8-1D25-4336-8AF6-5C67CEC73A01}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Grafic</RootNamespace>
+    <AssemblyName>Grafic</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>true</GenerateManifests>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>grafic.ico</ApplicationIcon>
+    <ManifestCertificateThumbprint>279DB021FB0D507A2B6990AA5207DA3A93FC6C17</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Grafic_TemporaryKey.pfx</ManifestKeyFile>
+    <SignManifests>true</SignManifests>
+    <PublishUrl>D:\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Boxes\AboutBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boxes\AboutBoxForm.Designer.cs">
+      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boxes\ColorBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boxes\ColorBoxForm.Designer.cs">
+      <DependentUpon>ColorBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boxes\LayerBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boxes\LayerBoxForm.Designer.cs">
+      <DependentUpon>LayerBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boxes\OptionBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boxes\OptionBoxForm.Designer.cs">
+      <DependentUpon>OptionBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyGrafics\AdjustingBox.cs" />
+    <Compile Include="MyGrafics\ClosedShape.cs" />
+    <Compile Include="MyGrafics\Curve.cs" />
+    <Compile Include="MyGrafics\Elli.cs" />
+    <Compile Include="MyGrafics\History.cs" />
+    <Compile Include="MyGrafics\Line.cs" />
+    <Compile Include="MyGrafics\NonClosedShape.cs" />
+    <Compile Include="MyGrafics\Rect.cs" />
+    <Compile Include="MyGrafics\RoundedRect.cs" />
+    <Compile Include="MyGrafics\Shape.cs" />
+    <Compile Include="Boxes\InfoBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boxes\InfoBoxForm.Designer.cs">
+      <DependentUpon>InfoBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyGrafics\Text.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Boxes\ColorBoxForm.resx">
+      <DependentUpon>ColorBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boxes\InfoBoxForm.resx">
+      <DependentUpon>InfoBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boxes\ToolBoxForm.resx">
+      <DependentUpon>ToolBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Grafic_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Boxes\ToolBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boxes\ToolBoxForm.Designer.cs">
+      <DependentUpon>ToolBoxForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Boxes\AboutBoxForm.resx">
+      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boxes\LayerBoxForm.resx">
+      <DependentUpon>LayerBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boxes\OptionBoxForm.resx">
+      <DependentUpon>OptionBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursors\CloneStampToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\CloneStampToolCursorSetSource.cur" />
+    <EmbeddedResource Include="Cursors\ColorPickerToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\EllipseSelectToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\EllipseSelectToolCursorMouseDown.cur" />
+    <EmbeddedResource Include="Cursors\EllipseToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\EraserToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\EraserToolCursorMouseDown.cur" />
+    <EmbeddedResource Include="Cursors\FreeformShapeToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\GenericToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\GenericToolCursorMouseDown.cur" />
+    <EmbeddedResource Include="Cursors\LassoSelectToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\LineToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\MagicWandToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\MoveSelectionToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\MoveToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\PaintBrushToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\PaintBrushToolCursorMouseDown.cur" />
+    <EmbeddedResource Include="Cursors\PaintBucketToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\PanToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\PanToolCursorInvalid.cur" />
+    <EmbeddedResource Include="Cursors\PanToolCursorMouseDown.cur" />
+    <EmbeddedResource Include="Cursors\PencilToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\RecoloringToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\RecoloringToolCursorAdjustColor.cur" />
+    <EmbeddedResource Include="Cursors\RecoloringToolCursorPickColor.cur" />
+    <EmbeddedResource Include="Cursors\RectangleSelectToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\RectangleSelectToolCursorMouseDown.cur" />
+    <EmbeddedResource Include="Cursors\RectangleToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\RoundedRectangleToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\ShapeToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\ShapeToolCursorMouseDown.cur" />
+    <EmbeddedResource Include="Cursors\TextToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\ZoomInToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\ZoomOutToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\ZoomToolCursor.cur" />
+    <EmbeddedResource Include="Cursors\RotateToolCursor.cur" />
+    <Content Include="grafic.ico" />
+    <Content Include="Icons\AntiAliasingEnabledIcon.png" />
+    <Content Include="Icons\ColorPickerToolIcon.png" />
+    <Content Include="Icons\EllipseToolIcon.png" />
+    <Content Include="Icons\EraserToolIcon.png" />
+    <Content Include="Icons\FontBoldIcon.png" />
+    <Content Include="Icons\FontItalicIcon.png" />
+    <Content Include="Icons\FontUnderlineIcon.png" />
+    <Content Include="Icons\FreeformShapeToolIcon.png" />
+    <Content Include="Icons\HistoryFastForwardIcon.png" />
+    <Content Include="Icons\HistoryRewindIcon.png" />
+    <Content Include="Icons\LineToolIcon.png" />
+    <Content Include="Icons\MenuEditRedoIcon.png" />
+    <Content Include="Icons\MenuEditUndoIcon.png" />
+    <Content Include="Icons\MenuFileCloseIcon.png" />
+    <Content Include="Icons\MenuFileNewIcon.png" />
+    <Content Include="Icons\MenuFileOpenIcon.png" />
+    <Content Include="Icons\MenuFilePrintIcon.png" />
+    <Content Include="Icons\MenuFileSaveAsIcon.png" />
+    <Content Include="Icons\MenuFileSaveIcon.png" />
+    <Content Include="Icons\MenuHelpForumIcon.png" />
+    <Content Include="Icons\MenuHelpHelpTopicsIcon.png" />
+    <Content Include="Icons\MenuHelpTutorialsIcon.png" />
+    <Content Include="Icons\MenuImageRotate180Icon.png" />
+    <Content Include="Icons\MenuImageRotate90CCWIcon.png" />
+    <Content Include="Icons\MenuImageRotate90CWIcon.png" />
+    <Content Include="Icons\MenuViewRulersIcon.png" />
+    <Content Include="Icons\MenuViewZoomInIcon.png" />
+    <Content Include="Icons\MenuViewZoomOutIcon.png" />
+    <Content Include="Icons\MenuWindowColorsIcon.png" />
+    <Content Include="Icons\MenuWindowLayersIcon.png" />
+    <Content Include="Icons\MenuWindowToolsIcon.png" />
+    <Content Include="Icons\MoveSelectionToolIcon.png" />
+    <Content Include="Icons\MoveToolIcon.png" />
+    <Content Include="Icons\PaintBrushToolIcon.png" />
+    <Content Include="Icons\PaintBucketIcon.png" />
+    <Content Include="Icons\PanToolIcon.png" />
+    <Content Include="Icons\PencilToolIcon.png" />
+    <Content Include="Icons\SwapIcon.png" />
+    <Content Include="Icons\TextToolIcon.png" />
+    <Content Include="Icons\ToolSprayPaint.png" />
+    <Content Include="Icons\ZoomToolIcon.png" />
+    <Content Include="Documentation.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
